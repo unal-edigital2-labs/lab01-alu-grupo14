@@ -1,6 +1,5 @@
 # lab05 : Unidad de suma, resta, multiplicación, división y visualización BCD
 ## Introducción
-Hola
 
 Para este paquete de trabajo, deben estar inscrito en un grupo y clonar la información del siguiente link [WP05](https://classroom.github.com/g/dHrBou9a). Una vez aceptado el repositorio debe descargarlo en su computador, para ello debe clonar el mismo. Si no sabe cómo hacerlo revise la metodología de trabajo, donde se explica el proceso
 
@@ -9,7 +8,7 @@ Las documentación deben estar diligencia en el archivo README.md del repositori
 Una vez clone el repositorio, realice lo siguiente:
 
 
-## descipción 
+## DESCRIPCION 
 La unidad aritmética, es tal que cuenta con componentes para realizar operaciones aritméticas. cada operación aritmética es ejecutada acuerdo al código de la operación. 
 
 Como ejercicio académico, se propone construye una unidad con 4 operaciones aritméticas: suma, resta, multiplicación y división.  de igual manera, el resultados se visualiza en los display de siete segmentos. El flujo de datos y la selección de la operación se realiza acorde a la señal opcode, y segun la siguiente tabla:
