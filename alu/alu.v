@@ -11,14 +11,15 @@ module alu(
     input rst
  );
 
-// Declaraci髇 de salidas de cada bloque 
+	//Hola otra vez
+// Declaraci贸n de salidas de cada bloque 
 wire [3:0] sal_suma;
 wire [3:0] sal_resta;
 wire [3:0] sal_div;
 wire [5:0] sal_mult;
 
 
-// Declaraci髇 de las entradas init de cada bloque 
+// Declaraci贸n de las entradas init de cada bloque 
 reg [3:0] init; 
 wire init_suma;
 wire init_resta;
@@ -36,7 +37,7 @@ reg [15:0]int_bcd;
 
 wire [3:0] operacion;
 
-// descripci髇 del decodificacion de operaciones
+// descripci贸n del decodificacion de operaciones
 always @(*) begin
 	case(opcode) 
 		2'b00: init<=1;
@@ -62,13 +63,13 @@ always @(*) begin
 end
 
 
-//instanciaci髇 de los componnetes 
+//instanciaci贸n de los componnetes 
 
 sum4b sum(. init(init_suma),.xi({1'b0,portA}), .yi({1'b0,portB}),.sal(sal_suma));
 multiplicador mul ( .MR(portA), .MD(portB), .init(init_mult),.clk(clk), .pp(sal_mult));
 display dp( .num(int_bcd), .clk(clk), .sseg(sseg), .an(an), .rst(rst));
 
-// adicone los dos bloques que hacen flata la resta y divisi髇
+// adicone los dos bloques que hacen flata la resta y divisi贸n
 
 
 
