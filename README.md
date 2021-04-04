@@ -53,4 +53,4 @@ El diagrama estructural, se soporta en los componentes desarrollados en los ante
 8. hacer la documentación respectiva en el archivo README
 
 
-#DESARROLLO
+# DESARROLLO
