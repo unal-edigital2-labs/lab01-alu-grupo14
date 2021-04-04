@@ -8,17 +8,17 @@ Las documentación deben estar diligencia en el archivo README.md del repositori
 Una vez clone el repositorio, realice lo siguiente:
 
 
-## DESCRIPCION 
-La unidad aritmética, es tal que cuenta con componentes para realizar operaciones aritméticas. cada operación aritmética es ejecutada acuerdo al código de la operación. 
+## DESCRIPCION
+La unidad aritmética, es tal que cuenta con componentes para realizar operaciones aritméticas. cada operación aritmética es ejecutada acuerdo al código de la operación.
 
 Como ejercicio académico, se propone construye una unidad con 4 operaciones aritméticas: suma, resta, multiplicación y división.  de igual manera, el resultados se visualiza en los display de siete segmentos. El flujo de datos y la selección de la operación se realiza acorde a la señal opcode, y segun la siguiente tabla:
 
 
 opcode | operación  enteros positivos
 00| suma
-01| resta 
+01| resta
 10|  multiplicación
-11| división 
+11| división
 
 Por lo tanto, la unidad debe contar con:
 
@@ -43,7 +43,7 @@ El diagrama estructural, se soporta en los componentes desarrollados en los ante
 
 ## Entregables
 
-1. Definir el diagrama estructurar interno de cada bloque funcionar 
+1. Definir el diagrama estructurar interno de cada bloque funcionar
 2. Descargar la estructura propuesta de la  Unidad Aritmética del paquete de trabajo [WP05](https://classroom.github.com/g/dHrBou9a) Este proyecto cuenta con el archivo `alu.v` y, tiene la carpeta `src` que cuenta con las 5 carpetas de cada componente.
 3. Implementar `alu.v` en la FPGA, y  comprobar el funcionamiento  de la suma la multiplicación y la visualización
 4. Incluir el  HDL para le divisor  realizado en el ejercicio anterior, en la carpeta `src/divisor`  y, adicione los archivos e instanciar el bloque divisor.
@@ -51,6 +51,6 @@ El diagrama estructural, se soporta en los componentes desarrollados en los ante
 6. Realizar el testbench del bloque alu.
 7. implementar el sistema completo en la FPGA remota
 8. hacer la documentación respectiva en el archivo README
-  
 
- 
+
+# DESARROLLO
