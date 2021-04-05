@@ -67,3 +67,9 @@ Por otro lado describimos el diagrama de estados para tener claro las variables 
 
 
 ## Restador
+
+## Pruebas con la FPGA
+![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/suma.jpeg)
+![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/multip.jpeg)
+![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/resta.jpeg)
+![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/divis.jpeg)
