@@ -57,7 +57,13 @@ El diagrama estructural, se soporta en los componentes desarrollados en los ante
 
 ## Divisor
 
-![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/ESTADOSD.png)
+Para el desarrollo del divisor se realiza el diagrama de flujo para tener en cuenta el fucionamiento general del código.
 
 ![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/FLUJOD.png)
+
+Por otro lado describimos el diagrama de estados para tener claro las variables de control.
+
+![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/ESTADOSD.png)
+
+
 ## Restador
