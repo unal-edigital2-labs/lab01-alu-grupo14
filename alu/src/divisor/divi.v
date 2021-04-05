@@ -16,7 +16,6 @@ reg resta;
 reg [1:0] cont;
 reg [5:0] C;
 wire z;
-
 reg [3:0] status =0;
 
 assign z=(cont==0)?1:0;

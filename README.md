@@ -60,7 +60,6 @@ Por otro lado describimos el diagrama de estados para tener claro las variables 
 
 El módulo tiene las entradas DV y DR de 3 bits que corresponden al dividendo y al divisor respectivamente. Además de las variables init y clk, para controlar la logica secuencial del programa. Y la salida DP de 3 bits que corresponde a el resultado de la división.
 
-
 ``` verilog
 module divi( input [2:0] DV,
   input [2:0] DR,
@@ -69,6 +68,114 @@ module divi( input [2:0] DV,
 	output  reg [2:0] DP);
 ```
 
+Creamos registros  y wires para las variables de control y de operaciones.
+
+``` verilog
+reg done;
+reg sh;
+reg rst;
+reg resta;
+reg [1:0] cont;
+reg [5:0] C;
+wire z;
+reg [3:0] status =0;
+```
+
+Definimos el bloque en el cual se realizaran todas las operaciones según a la lógica del diagrama de flujo, dependiendo de las variables de control que se manejan en la maquina de estados.
+
+``` verilog
+always @(negedge clk) begin
+
+if (rst) begin
+    C ={3'b000,DV};
+  cont= 3;
+end
+else	begin
+  if (sh) begin
+    C= C << 1;
+        if(cont>0) begin
+    cont = cont-1;
+        end
+  end
+if (resta) begin
+   C[0]=1;
+     C[5:3] = C[5:3]-DR;
+  end
+end
+end
+```
+
+Asi mismo, definimos otro bloque que representara la maquina de estados, en donde se cambian las variables de estado. Esto lo realizamos por medio de un "case" con 6 casos que representan cada uno de los estados que se definieron anteriormente.
+
+``` verilog
+// FSM
+parameter START =0,  SHIFT =1, RESTA =2, CHECK=3, END1 =4, CHECK2= 5;
+
+always @(posedge clk) begin
+	case (status)
+	START: begin
+	   resta=0;
+	   sh=0;
+	if(init) begin
+		status=SHIFT;
+		done=0;
+	    rst=1;
+	end
+	end
+
+	SHIFT: begin
+		resta=0;
+	    sh=1;
+	    done=0;
+	    rst=0;
+		status=CHECK;
+		end
+
+	CHECK: begin
+	    done=0;
+	    resta=0;
+	    rst=0;
+        sh=0;
+        if( C[5:3]<DR )begin
+            status=CHECK2;
+        end else
+            status=RESTA;
+		end
+
+	RESTA: begin
+	    done=0;
+	    resta=1;
+	    rst=0;
+	    sh=0;
+	    status=CHECK2;
+		end
+
+	CHECK2: begin
+	    done=0;
+	    resta=0;
+	    rst=0;
+	    sh=0;
+	    if(z)begin
+	       status=END1;
+	   end else
+		status=SHIFT;
+	end
+
+	END1: begin
+	    done=1;
+	    resta=0;
+	    rst=1;
+	    sh=0;
+        DP = C[2:0];
+	    status =START;
+		end
+
+	 default:
+		status =START;
+	endcase
+
+end
+```
 
 
 ## Restador
