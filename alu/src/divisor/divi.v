@@ -14,7 +14,6 @@ reg sh;
 reg rst;
 reg resta;
 reg [1:0] cont;
-reg [2:0] A;
 reg [5:0] C;
 wire z;
 
@@ -26,7 +25,6 @@ assign z=(cont==0)?1:0;
   always @(negedge clk) begin
 
 	if (rst) begin
-	    A=0;
       C ={3'b000,DV};
 		cont= 3;
 	end
