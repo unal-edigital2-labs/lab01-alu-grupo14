@@ -59,4 +59,5 @@ El diagrama estructural, se soporta en los componentes desarrollados en los ante
 
 ![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/ESTADOSD.png)
 
+![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/FLUJOD.png)
 ## Restador
