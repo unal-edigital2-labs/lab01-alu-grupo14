@@ -57,13 +57,30 @@ El diagrama estructural, se soporta en los componentes desarrollados en los ante
 
 ## Divisor
 
+### Diagrama de Flujo y Estados
+
 Para el desarrollo del divisor se realiza el diagrama de flujo para tener en cuenta el fucionamiento general del código.
 
 ![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/FLUJOD.png)
 
-Por otro lado describimos el diagrama de estados para tener claro las variables de control.
+Por otro lado describimos el diagrama de estados para tener claro las variables de control del sistema.
 
 ![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/ESTADOSD.png)
+
+### Código
+
+El módulo tiene las entradas DV y DR de 3 bits que corresponden al dividendo y al divisor respectivamente. Además de las variables init y clk, para controlar la logica secuencial del programa. Y la salida DP de 3 bits que corresponde a el resultado de la división.
+
+
+``` verilog
+module divi( input [2:0] DV,
+							input [2:0] DR,
+						   	input init,
+							 input clk,
+							 output  reg [2:0] DP
+    );
+```
+
 
 
 ## Restador
