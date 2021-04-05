@@ -46,11 +46,6 @@ El diagrama estructural, se soporta en los componentes desarrollados en los ante
 
 ## Divisor
 
-<<<<<<< HEAD
-![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/ESTADOSD.png)
-
-![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/FLUJOD.png)
-=======
 ### Diagrama de Flujo y Estados
 
 Para el desarrollo del divisor se realiza el diagrama de flujo para tener en cuenta el fucionamiento general del código.
@@ -77,8 +72,26 @@ module divi( input [2:0] DV,
 
 
 
->>>>>>> a6d38384da239642ffe34a71cb4bc22291a6f195
 ## Restador
+
+En el modulo de la resta se hace por complemento a 2, por lo tanto se toma una de las entradas al modulo, en este caso sera "y" el cual se niega al ser asignado a una constante, luego al hacer la suma con la primera entrada se le suma 1 ya que se debe cumplir el funcionamiento por complemento en a 2 y de esta manera se llegara al resultado, este sera una variable de 4 bits "st" y sera asignado a la salida del modulo "sal".
+``` verilog
+module resta(init, x, y,sal);
+
+  input init;
+  input [3 :0] x;
+  input [3 :0] y;
+  output [3 :0] sal;
+
+
+  wire [3:0] st;
+  wire [3:0] const;
+
+  assign const = ~y;
+  assign sal= st[3:0];
+
+  assign st  = 	x+const+1;
+```
 
 ## Pruebas con TestBench
 
