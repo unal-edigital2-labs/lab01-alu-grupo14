@@ -63,11 +63,10 @@ El módulo tiene las entradas DV y DR de 3 bits que corresponden al dividendo y 
 
 ``` verilog
 module divi( input [2:0] DV,
-							input [2:0] DR,
-						   	input init,
-							 input clk,
-							 output  reg [2:0] DP
-    );
+  input [2:0] DR,
+  input init,
+	input clk,
+	output  reg [2:0] DP);
 ```
 
 
