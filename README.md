@@ -57,19 +57,18 @@ El diagrama estructural, se soporta en los componentes desarrollados en los ante
 
 ## Divisor
 
-Para el desarrollo del divisor se realiza el diagrama de flujo para tener en cuenta el fucionamiento general del código.
-
-![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/FLUJOD.png)
-
-Por otro lado describimos el diagrama de estados para tener claro las variables de control.
-
 ![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/ESTADOSD.png)
 
-
+![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/FLUJOD.png)
 ## Restador
 
 ## Pruebas con la FPGA
+Ya con la ALU completa, pasaremos a demostrar el funcionamiento del código dentro de la FPGA, primero cabe aclarar que los 3 primeros switch de derecha a izquierda hacen referencia a los 3 bits de la primera entrada, los otros siguientes a la segunda entrada y el séptimo con el octavo switch al "opcode". Dentro de todas las pruebas se esta mostrando como primera entrada "110" que en decimal es 6 y como segunda entrada "011" que seria 3.
+Dentro de la primera imagen se hace el módulo de la suma siendo opcode como "00", por lo tanto el resultado sera 9 dentro del display.
 ![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/suma.jpeg)
-![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/multip.jpeg)
+ahora cuando opcode es "01" estamos en el módulo de la resta, por lo tanto el resultado seria 3 dentro del display.
 ![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/resta.jpeg)
+Cuando opcode es "10" estamos en el módulo de la multiplicación, por lo tanto el resultado seria 12 dentro del display. Al multiplicar 6 por 3 dará 18, sin embargo como el display esta en el sistema hexadecimal por eso muestra 12.
+![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/multip.jpeg)
+Por ultimo, opcode en "11" estamos en el modulo de la división, y el resultado en el display seria 2.
 ![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/divis.jpeg)
