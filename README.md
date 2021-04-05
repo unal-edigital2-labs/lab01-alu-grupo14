@@ -41,26 +41,50 @@ Según las especificaciones anteriormente descrita, la caja funcional de la unid
 
 El diagrama estructural, se soporta en los componentes desarrollados en los anteriores laboratorios. De esta manera,  tanto el sumador, el multiplicador  y el Display, son tomados de los lab2, lab5 y lab4  respectivamente. Adicional a la estructura de cada operación se encuentra el decodificador  y el multiplexador.
 
-## Entregables
-
-1. Definir el diagrama estructurar interno de cada bloque funcionar
-2. Descargar la estructura propuesta de la  Unidad Aritmética del paquete de trabajo [WP05](https://classroom.github.com/g/dHrBou9a) Este proyecto cuenta con el archivo `alu.v` y, tiene la carpeta `src` que cuenta con las 5 carpetas de cada componente.
-3. Implementar `alu.v` en la FPGA, y  comprobar el funcionamiento  de la suma la multiplicación y la visualización
-4. Incluir el  HDL para le divisor  realizado en el ejercicio anterior, en la carpeta `src/divisor`  y, adicione los archivos e instanciar el bloque divisor.
-5. Diseñar el bloque restador, adicionar dicho bloque a la respectiva carpeta e instanciar el modulo en `alu.v`.
-6. Realizar el testbench del bloque alu.
-7. implementar el sistema completo en la FPGA remota
-8. hacer la documentación respectiva en el archivo README
-
 
 # DESARROLLO
 
 ## Divisor
 
+<<<<<<< HEAD
 ![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/ESTADOSD.png)
 
 ![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/FLUJOD.png)
+=======
+### Diagrama de Flujo y Estados
+
+Para el desarrollo del divisor se realiza el diagrama de flujo para tener en cuenta el fucionamiento general del código.
+
+![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/FLUJOD.png)
+
+Por otro lado describimos el diagrama de estados para tener claro las variables de control del sistema.
+
+![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/ESTADOSD.png)
+
+### Código
+
+El módulo tiene las entradas DV y DR de 3 bits que corresponden al dividendo y al divisor respectivamente. Además de las variables init y clk, para controlar la logica secuencial del programa. Y la salida DP de 3 bits que corresponde a el resultado de la división.
+
+
+``` verilog
+module divi( input [2:0] DV,
+							input [2:0] DR,
+						   	input init,
+							 input clk,
+							 output  reg [2:0] DP
+    );
+```
+
+
+
+>>>>>>> a6d38384da239642ffe34a71cb4bc22291a6f195
 ## Restador
+
+## Pruebas con TestBench
+
+Se realiza la prueba de la ALU con el TestBench en el software EDA-playground, usando como entradas de los puertos A y B los valores de 6 y 3 respectivamente, y variando la señal de entrada opcode para cambiar la operación aritmética que realiza la ALU. Las señales de salida de los modulos de suma, resta, multiplicación y división según las señales de entrada son los siguientes:
+
+![testbench](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/testbench.png)
 
 ## Pruebas con la FPGA
 Ya con la ALU completa, pasaremos a demostrar el funcionamiento del código dentro de la FPGA, primero cabe aclarar que los 3 primeros switch de derecha a izquierda hacen referencia a los 3 bits de la primera entrada, los otros siguientes a la segunda entrada y el séptimo con el octavo switch al "opcode". Dentro de todas las pruebas se esta mostrando como primera entrada "110" que en decimal es 6 y como segunda entrada "011" que seria 3.
