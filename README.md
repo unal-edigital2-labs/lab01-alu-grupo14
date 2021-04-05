@@ -54,3 +54,7 @@ El diagrama estructural, se soporta en los componentes desarrollados en los ante
 
 
 # DESARROLLO
+
+## Divisor
+
+## Restador
