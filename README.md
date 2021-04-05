@@ -46,13 +46,19 @@ El diagrama estructural, se soporta en los componentes desarrollados en los ante
 
 ## Divisor
 
-![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/ESTADOSD.png)
+Para el desarrollo del divisor se realiza el diagrama de flujo para tener en cuenta el fucionamiento general del código.
 
 ![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/FLUJOD.png)
+
+Por otro lado describimos el diagrama de estados para tener claro las variables de control.
+
+![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/ESTADOSD.png)
+
+
 ## Restador
 
-##TestBench
-
-Se realiza la prueba de la ALU con el TestBench en el software EDA-playground, usando como entradas de los puertos A y B los valores de 6 y 3 respectivamente, y variando la señal de entrada opcode para cambiar la operación aritmética que realiza la ALU. Las señales de salida de los modulos de suma, resta, multiplicación y división según las señales de entrada son los siguientes:
-
-![testbench](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/testbench.png)
+## Pruebas con la FPGA
+![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/suma.jpeg)
+![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/multip.jpeg)
+![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/resta.jpeg)
+![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/divis.jpeg)
