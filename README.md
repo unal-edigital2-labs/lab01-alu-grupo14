@@ -41,17 +41,6 @@ Según las especificaciones anteriormente descrita, la caja funcional de la unid
 
 El diagrama estructural, se soporta en los componentes desarrollados en los anteriores laboratorios. De esta manera,  tanto el sumador, el multiplicador  y el Display, son tomados de los lab2, lab5 y lab4  respectivamente. Adicional a la estructura de cada operación se encuentra el decodificador  y el multiplexador.
 
-## Entregables
-
-1. Definir el diagrama estructurar interno de cada bloque funcionar
-2. Descargar la estructura propuesta de la  Unidad Aritmética del paquete de trabajo [WP05](https://classroom.github.com/g/dHrBou9a) Este proyecto cuenta con el archivo `alu.v` y, tiene la carpeta `src` que cuenta con las 5 carpetas de cada componente.
-3. Implementar `alu.v` en la FPGA, y  comprobar el funcionamiento  de la suma la multiplicación y la visualización
-4. Incluir el  HDL para le divisor  realizado en el ejercicio anterior, en la carpeta `src/divisor`  y, adicione los archivos e instanciar el bloque divisor.
-5. Diseñar el bloque restador, adicionar dicho bloque a la respectiva carpeta e instanciar el modulo en `alu.v`.
-6. Realizar el testbench del bloque alu.
-7. implementar el sistema completo en la FPGA remota
-8. hacer la documentación respectiva en el archivo README
-
 
 # DESARROLLO
 
@@ -61,3 +50,9 @@ El diagrama estructural, se soporta en los componentes desarrollados en los ante
 
 ![diagramaEstados](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/FLUJOD.png)
 ## Restador
+
+##TestBench
+
+Se realiza la prueba de la ALU con el TestBench en el software EDA-playground, usando como entradas de los puertos A y B los valores de 6 y 3 respectivamente, y variando la señal de entrada opcode para cambiar la operación aritmética que realiza la ALU. Las señales de salida de los modulos de suma, resta, multiplicación y división según las señales de entrada son los siguientes:
+
+![testbench](https://github.com/unal-edigital2/lab01-alu-grupo14/blob/master/fig/testbench.png)
